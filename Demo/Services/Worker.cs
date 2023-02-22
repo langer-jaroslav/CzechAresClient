@@ -26,14 +26,14 @@ public class Worker : BackgroundService
 
             _logger.LogInformation("found: " + aresResult);
 
-             aresResult = await _aresClient.SearchByCompanyIdAsync("06279996");
+            aresResult = await _aresClient.SearchByCompanyIdAsync("06279996");
 
-             _logger.LogInformation("found: " + aresResult);
+            _logger.LogInformation("found: " + aresResult);
         }
         catch (Exception e)
         {
             _logger.LogError(e, e.Message);
         }
-        
+
     }
 }
