@@ -22,7 +22,7 @@ Add using and ICzechAresClientService as a service in Program.cs
 
    ```csharp
    builder.Services.AddTransient<ICzechAresClientService, CzechAresClientService>();
-   builder.Services.AddHttpClient();
+   builder.Services.AddHttpClient(); // do not forget this, its used by the lib
    ```
 ## Using
 Inject service then use service as following:
