@@ -40,7 +40,7 @@ public class CzechAresClientService : ICzechAresClientService
         return result;
     }
 
-    private async Task<Record> DeserializeXmlAsync(string xml)
+    private async Task<Record?> DeserializeXmlAsync(string xml)
     {
         var result = new Record();
         using var memoryStream = new MemoryStream();
@@ -106,6 +106,8 @@ public class CzechAresClientService : ICzechAresClientService
         }
         await memoryStream.DisposeAsync();
 
+        if (string.IsNullOrWhiteSpace(result.CompanyName) && string.IsNullOrWhiteSpace(result.CompanyId))
+            return null;
         return result;
     }
 

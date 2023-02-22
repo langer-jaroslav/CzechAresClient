@@ -22,7 +22,7 @@ public class Worker : BackgroundService
 
         try
         {
-            var aresResult = await _aresClient.SearchByCompanyIdAsync("27074358");
+            var aresResult = await _aresClient.SearchByCompanyIdAsync("27074358A");
 
             _logger.LogInformation("found: " + aresResult);
 
