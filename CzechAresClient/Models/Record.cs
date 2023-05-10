@@ -10,6 +10,7 @@ public class Record
     public string PostCode { get; set; } = null!;
     public string Street { get; set; } = null!;
     public string BuildingNumber { get; set; } = null!;
+    public string? OrientationNumber { get; set; }
     public string Country { get; set; } = null!;
 
     public override string ToString()
