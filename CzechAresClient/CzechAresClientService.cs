@@ -101,6 +101,12 @@ public class CzechAresClientService : ICzechAresClientService
                 xmlReader.Read();
                 result.BuildingNumber = xmlReader.Value;
             }
+            else if (xmlReader.NodeType == XmlNodeType.Element && xmlReader.Name.Equals("D:CO"))
+            {
+                xmlReader.MoveToElement();
+                xmlReader.Read();
+                result.OrientationNumber = xmlReader.Value;
+            }
             xmlReader.MoveToElement();
 
         }
