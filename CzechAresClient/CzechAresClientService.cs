@@ -18,7 +18,7 @@ public class CzechAresClientService : ICzechAresClientService
     public CzechAresClientService(IHttpClientFactory clientFactory)
     {
         _clientFactory = clientFactory;
-        _apiUrl = "https://wwwinfo.mfcr.cz/cgi-bin/ares/";
+        _apiUrl = "https://www.info.mfcr.cz/cgi-bin/ares/";
     }
 
     public async Task<Record?> SearchByCompanyIdAsync(string companyId)
